@@ -1,0 +1,70 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/.next-api-backup/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (jangan pernah commit API key atau .env.mobile; template .example tetap di-track)
+.env*
+!.env.example
+!.env.mobile.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# android / capacitor build artifacts (folder android/ tetap aman di-commit untuk Android Studio)
+/android/.gradle/
+/android/build/
+/android/app/build/
+/android/app/release/
+/android/captures/
+/android/.idea/
+/android/local.properties
+/android/app/src/main/assets/public/
+*.jks
+*.keystore
+
+# ==============================================================================
+# OPSIONAL: Arsip Ebook Sumber (knowledge/source/)
+# ------------------------------------------------------------------------------
+# Folder knowledge/source/ TIDAK pernah dibaca saat runtime dan sudah dikecualikan
+# dari bundle Vercel Function lewat next.config.ts.
+#
+# AKTIFKAN (hapus tanda # di bawah ini) JIKA:
+# 1. Repository GitHub Anda bersifat PUBLIK, atau
+# 2. Ebook PDF di dalam knowledge/source/ dilindungi hak cipta / bukan milik Anda, atau
+# 3. Ukuran PDF sangat besar sehingga memperlambat push/clone Git.
+#
+# knowledge/source/
+# ==============================================================================
